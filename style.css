@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Inter';
-    /* outline: 1px solid red;  */
+    outline: 1px solid red; 
 }
 
 body {
@@ -270,34 +270,38 @@ nav ul li a {
 
 
 .histoire-top {
-    width: 90%;
-    max-width: 900px;
+    width: 100%;
+    max-width: 90%;
     position: relative;
     border-radius: 10px;
     overflow: hidden;
 }
+
 .histoire-image {
-    width: 100%;
-    height: 400px;
+
+    height: auto;
+    min-height: 100vh;
     background: url('asset/imagechien2.jpeg') no-repeat center/cover;
     border-radius: 10px;
-    /* FLEXBOX POUR PLACER LE CONTENU EN BAS À GAUCHE */
+    /* FLEXBOX POUR PLACER LE CONTENU EN BAS À GAUCHE */ 
     display: flex;
-    /*  pour Placer le contenu en bas */
+     /* pour Placer le contenu en bas */
     align-items: flex-end; 
-    /* Alignement  à gauche */
+   /* * Alignement  à gauche */
     justify-content: flex-start; 
     padding: 20px;
     color: white;
+    margin: auto;
     position: relative;
+   
 }
-
 .histoire-content {
- 
-    padding: 15px;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
     border-radius: 10px;
-    max-width: 500px;
     text-align: left;
+    background-size: cover;
 }
 
 .histoire-content .titre {
@@ -313,7 +317,7 @@ nav ul li a {
 
 .histoire-content .date {
     font-size: 1rem;
-    color: #ddd;
+    color:white;
 }
 
 /* Galerie d'images */
@@ -398,9 +402,12 @@ nav ul li a {
 /* Impact */
 .impact {
     text-align: center;
-    padding: 10px;;
+    padding: 10%;;
 }
-
+.title{
+    text-align: center;
+    padding: 20%;;
+}
 /* Conteneur Impact */
 .impact-container {
     display: flex;
@@ -439,7 +446,7 @@ nav ul li a {
 .title {
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 10%;
 }
 
 .testimonials {
