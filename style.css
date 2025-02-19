@@ -3,6 +3,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Inter';
+    /* outline: 1px solid red;  */
 }
 
 body {
@@ -25,7 +27,7 @@ nav ul {
     padding: 0;
     margin: 0;
     width: 100%;
-    justify-content: space-between; /* Space between elements */
+    justify-content: space-between;
 }
 
 .logo-container {
@@ -51,19 +53,21 @@ nav ul li a {
     padding: 10px 15px;
 }
 
+/* Bouton "Faire un don" */
 .donate-btn {
     background-color: #F7012A;
     color: white;
     font-size: 16px;
     font-weight: bold;
     border: none;
-    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    margin: 10px;
+    padding: 10px 20px;
+    gap: 8px;
     text-decoration: none;
 }
 
@@ -80,6 +84,7 @@ nav ul li a {
     background-position: center center;
     background-repeat: no-repeat;
     color: white;
+    font-size: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -95,59 +100,85 @@ nav ul li a {
     text-align: center;
 }
 
-
-.donation-container {
+/* SECTION DONATIONS */
+.donation-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 600px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    width: 100%;
 }
 
-.options {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+
+
+/* Titre */
+.donation-section h2 {
+    text-align: center;
     margin-bottom: 20px;
 }
 
-.option {
+/* Conteneur principal */
+.donation-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+/* Options de don */
+.donation-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Style de base pour les options */
+.donation-option {
     background-color: white;
     border: 1px solid #7b8189;
     border-radius: 8px;
     padding: 15px;
-    margin: 10px 0;
-    width: 100%;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 200px;
+    flex: 1;
+    min-width: 150px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
 }
 
-.button-container {
+/* Effet au survol */
+.donation-option:hover {
+    transform: scale(1.05);
+}
+
+/* Boutons de fréquence */
+.donation-frequency {
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
-.don-button {
-    background-color: #7b8189;
-    color: white;
+.donation-frequency-btn {
+    background-color: #f2f3f6;
+    color: black;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-.don-button:hover {
-    background-color: #045b46;
-}
-
-.donate-button {
+/* Bouton de validation */
+.donate-submit-btn {
     background-color: #F7012A;
     color: white;
     font-size: 16px;
@@ -157,11 +188,295 @@ nav ul li a {
     border-radius: 5px;
     cursor: pointer;
     text-align: center;
-    transition: background-color 0.3s ease;
 }
 
-.donate-button:hover {
+.donate-submit-btn:hover {
     background-color: #d40125;
+}
+
+/* Boutons de donation */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+
+
+/* section 3 */
+
+.mission {
+    display: flex;
+    justify-content: center;
+    background-color: #edfcf5;
+}
+.content-container {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 90%; /* Presque toute la largeur */
+    margin: 20px auto; /* Centre horizontalement */
+}
+
+
+.image-container {
+    flex-shrink: 0;
+}
+
+.image-container img {
+    width: 500px;
+
+    height: auto;
+    display: block;
+}
+
+.text-container {
+    padding: 20px;
+    color: #333;
+    flex: 1;
+}
+
+.text-container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.text-container p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+
+/* Section 4 */
+.histoire {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.histoire h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+.histoire-top {
+    width: 90%;
+    max-width: 900px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.histoire-image {
+    width: 100%;
+    height: 400px;
+    background: url('asset/imagechien2.jpeg') no-repeat center/cover;
+    border-radius: 10px;
+    /* FLEXBOX POUR PLACER LE CONTENU EN BAS À GAUCHE */
+    display: flex;
+    /*  pour Placer le contenu en bas */
+    align-items: flex-end; 
+    /* Alignement  à gauche */
+    justify-content: flex-start; 
+    padding: 20px;
+    color: white;
+    position: relative;
+}
+
+.histoire-content {
+ 
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 500px;
+    text-align: left;
+}
+
+.histoire-content .titre {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.histoire-content .description {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.histoire-content .date {
+    font-size: 1rem;
+    color: #ddd;
+}
+
+/* Galerie d'images */
+.histoire-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.histoire-item {
+    flex: 1;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.histoire-item:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+}
+
+
+
+/* Section 4 */
+
+.section4 {
+    background-color: #edfcf5;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10%;
+}
+
+
+/* Questions */
+.question {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;   
+    width: 60%;
+ 
+ 
+}
+
+/* Conteneur des boutons */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+/* Boutons */
+.buttonquiz {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #7b8189;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease;
+    text-align: left;
+}
+
+/* Impact */
+.impact {
+    text-align: center;
+    padding: 10px;;
+}
+
+/* Conteneur Impact */
+.impact-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Chaque bloc d'impact */
+.impact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 30%;
+    max-width: 250px;
+}
+
+/* Images Impact */
+.impact-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+/* section 5  */
+
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.testimonials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 300px;
+    text-align: left;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-content strong {
+    font-size: 14px;
+    color: #555;
 }
 
 
@@ -172,7 +487,6 @@ nav ul li a {
     max-width: 500px;
     padding: 20px;
     border-radius: 8px;
-    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
     margin: 20px auto;
 }
 
@@ -234,22 +548,21 @@ textarea {
     font-size: 0.875rem;
 }
 
-
 /* Footer */
 .footer {
-    background-color: #232C3B; 
+    background-color: #232C3B;
     color: white;
-    display: flex; 
-    justify-content: space-around; 
-    align-items: center; 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     padding: 20px 10%;
     text-align: center;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
 
 .footer-section {
-    flex: 1; 
-    min-width: 200px; 
+    flex: 1;
+    min-width: 200px;
     margin: 10px;
 }
 
@@ -257,45 +570,120 @@ textarea {
     margin-bottom: 10px;
 }
 
-
 .email-icon {
-    width: 20px; 
+    width: 20px;
     height: auto;
     margin-right: 10px;
-    vertical-align: middle; 
+    vertical-align: middle;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
     .menu-right {
-        flex-direction: column; /* Stack items vertically on smaller screens */
+        flex-direction: column;
         align-items: flex-start;
+        gap: 10px;
     }
 
-    nav ul li {
-        margin-bottom: 10px;
+    .donation-options {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .form-container {
-        margin: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    nav ul {
+    .content-container {
         flex-direction: column;
     }
 
-    .hero h1 {
-        font-size: 8vw;
+    .hero-content {
+        padding: 10px;
+    }
+    .histoire-bottom {
+        flex-direction: column;
     }
 
-    .hero p {
-        font-size: 4vw;
+    .histoire-item {
+        width: 90%;
+    }
+    .impact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn-container {
+        flex-direction: column;
     }
 
-    .form-container {
-        margin: 10px;
-        padding: 15px;
+    button {
+        max-width: 100%;
+    }
+
+    .impact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section4 {
+        padding: 10%;
+    }
+
+    .question {
+        width: 100%;
+    }
+
+    .btn-container {
+        flex-direction: column;
+    }
+
+    .buttonquiz {
+        width: 100%;
+        max-width: none;
+    }
+
+    .impact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .impact-item {
+        width: 100%;
+    }
+    .section4 {
+        padding: 10%;
+    }
+
+    .question {
+        width: 100%;
+    }
+
+    .btn-container {
+        flex-direction: column;
+    }
+
+    .buttonquiz {
+        width: 100%;
+        max-width: none;
+    }
+
+    .impact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .impact-item {
+        width: 100%;
+    }
+    .testimonials {
+        flex-direction: column;
+        align-items: center;
+}
+ 
+
+
+@media (max-width: 480px) {
+    .donation-option {
+        width: 80%;
+    }
+
+    .hero-content {
+        font-size: 24px;
     }
 }
