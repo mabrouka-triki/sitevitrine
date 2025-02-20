@@ -8,7 +8,7 @@
 }
 
 body {
-    font-family: sans-serif;
+   
     background-color: white;
     color: black;
     margin: 0;
@@ -18,6 +18,24 @@ body {
 /* Header */
 header {
     background-color: #057858;
+}
+
+
+.nav-list {
+    
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+.logo-container {
+    margin-right: auto; 
 }
 
 nav ul {
@@ -53,6 +71,10 @@ nav ul li a {
     padding: 10px 15px;
 }
 
+.nav-list li {
+    margin: 0 15px;
+}
+
 /* Bouton "Faire un don" */
 .donate-btn {
     background-color: #F7012A;
@@ -84,11 +106,30 @@ nav ul li a {
     background-position: center center;
     background-repeat: no-repeat;
     color: white;
-    font-size: 50px;
+    font-size: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    width: 100%;
+    height: 100vh; 
+    padding: 0;
+}
+
+ .histoire-item1{
+    background-image: url('asset/imagechien.jpg');
+    width: 100%;
+    height: 100vh; 
+    padding: 0;
+}
+.histoire-item2{
+    background-image: url('asset/imagechien2.jpeg');
+    width: 100%;
+    height: 100vh; 
+    padding: 0;
+}
+.histoire-item3{
+    background-image: url('asset/ImageMax.jpeg');
     width: 100%;
     height: 100vh; 
     padding: 0;
@@ -134,7 +175,6 @@ nav ul li a {
 /* Options de don */
 .donation-options {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     width: 100%;
@@ -145,7 +185,7 @@ nav ul li a {
     background-color: white;
     border: 1px solid #7b8189;
     border-radius: 8px;
-    padding: 15px;
+    padding: 11px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     max-width: 200px;
@@ -158,6 +198,7 @@ nav ul li a {
 /* Effet au survol */
 .donation-option:hover {
     transform: scale(1.05);
+    background-color: rgba(0, 197, 126, 1) ;
 }
 
 /* Boutons de fréquence */
@@ -172,7 +213,8 @@ nav ul li a {
     background-color: #f2f3f6;
     color: black;
     border: none;
-    padding: 10px 20px;
+    
+    padding: 10px 10px;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -202,53 +244,54 @@ nav ul li a {
     margin: 20px 0;
 }
 
-
-
-/* section 3 */
-
+/* Section Mission */
 .mission {
     display: flex;
     justify-content: center;
-    background-color: #edfcf5;
+    background-color: #d2f5e3; 
+    padding: 40px 0;
 }
+
 .content-container {
     display: flex;
-    flex-direction: row;
     background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    width: 90%; /* Presque toute la largeur */
-    margin: 20px auto; /* Centre horizontalement */
+    width: 80%; 
+    max-width: 1000px; 
 }
-
 
 .image-container {
-    flex-shrink: 0;
-}
-
-.image-container img {
-    width: 500px;
-
-    height: auto;
-    display: block;
-}
-
-.text-container {
-    padding: 20px;
-    color: #333;
     flex: 1;
 }
 
+.image-container img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.text-container {
+    flex: 2;
+    padding: 40px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
 .text-container h2 {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .text-container p {
     font-size: 16px;
     line-height: 1.6;
+    max-width: 90%; 
 }
 
 
@@ -264,7 +307,7 @@ nav ul li a {
 
 .histoire h1 {
     margin-bottom: 20px;
-    font-size: 2rem;
+  
     font-weight: bold;
 }
 
@@ -280,14 +323,11 @@ nav ul li a {
 .histoire-image {
 
     height: auto;
-    min-height: 100vh;
+    min-height: 90vh;
     background: url('asset/imagechien2.jpeg') no-repeat center/cover;
     border-radius: 10px;
-    /* FLEXBOX POUR PLACER LE CONTENU EN BAS À GAUCHE */ 
     display: flex;
-     /* pour Placer le contenu en bas */
     align-items: flex-end; 
-   /* * Alignement  à gauche */
     justify-content: flex-start; 
     padding: 20px;
     color: white;
@@ -331,7 +371,7 @@ nav ul li a {
 }
 
 .histoire-item {
-    flex: 1;
+   
     height: 200px;
     background-size: cover;
     background-position: center;
@@ -402,11 +442,11 @@ nav ul li a {
 /* Impact */
 .impact {
     text-align: center;
-    padding: 10%;;
+
 }
 .title{
     text-align: center;
-    padding: 20%;;
+    padding: 1%;;
 }
 /* Conteneur Impact */
 .impact-container {
@@ -446,7 +486,7 @@ nav ul li a {
 .title {
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 10%;
+    
 }
 
 .testimonials {
@@ -490,8 +530,8 @@ nav ul li a {
 
 /* Formulaire */
 .form-container {
-    width: 100%;
-    max-width: 500px;
+    width: 90%;
+    max-width: 900px;
     padding: 20px;
     border-radius: 8px;
     margin: 20px auto;
@@ -555,13 +595,12 @@ textarea {
     font-size: 0.875rem;
 }
 
-/* Footer */
+
 .footer {
     background-color: #232C3B;
     color: white;
     display: flex;
     justify-content: space-around;
-    align-items: center;
     padding: 20px 10%;
     text-align: center;
     flex-wrap: wrap;
@@ -573,7 +612,7 @@ textarea {
     margin: 10px;
 }
 
-.footer h1, .footer h2, .footer h3 {
+.footer h1, .footer h2 {
     margin-bottom: 10px;
 }
 
@@ -585,12 +624,21 @@ textarea {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-    .menu-right {
+@media (max-width:  850px) {
+    nav {
         flex-direction: column;
+        align-items: flex-start; 
+    }
+
+    .nav-list {
+        flex-direction: column; 
         align-items: flex-start;
         gap: 10px;
+        width: 100%;
+        padding-left: 20px;
     }
+
+ 
 
     .donation-options {
         flex-direction: column;
@@ -606,10 +654,12 @@ textarea {
     }
     .histoire-bottom {
         flex-direction: column;
+        gap: 10px;
     }
 
     .histoire-item {
         width: 90%;
+        height: 150px;
     }
     .impact-container {
         flex-direction: column;
@@ -681,16 +731,17 @@ textarea {
     .testimonials {
         flex-direction: column;
         align-items: center;
+    }
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        margin: 10px 0;
+    }
+   
+
 }
  
 
-
-@media (max-width: 480px) {
-    .donation-option {
-        width: 80%;
-    }
-
-    .hero-content {
-        font-size: 24px;
-    }
-}
