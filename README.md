@@ -21,4 +21,4 @@ Quatre Pattes est une ONG dédiée à la protection des animaux. Le site dévelo
 
 1. Clonez le repo :
    ```bash
-   git clone https://github.com/mabrouka-triki/QuatrePattes-SiteVitrine.git
+   git clone https://github.com/mabrouka-triki/SiteVitrine.git
