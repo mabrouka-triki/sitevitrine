@@ -57,4 +57,7 @@ function validationForm() {
         document.getElementById('myForm').reset();
         window.location.href = "Accueil.html"; 
     }
+
+
+
 }

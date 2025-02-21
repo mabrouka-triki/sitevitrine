@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
+
   <title>Quattre Pattes</title>
 </head>
 <body>
@@ -38,27 +39,28 @@
       <h2>Faites un don</h2>
       <div class="donation-container">
         <div class="donation-options">
-          <div class="donation-option donation-option-10">
+          <div class="donation-option donation-option-10" data-amount="10">
             <strong>10€</strong><br />
             <p>Nourrir 5 animaux pendant une journée</p>
           </div>
-          <div class="donation-option donation-option-20">
+          <div class="donation-option donation-option-20" data-amount="20">
             <strong>20€</strong><br />
             <p>Héberger un animal pendant une nuit</p>
           </div>
-          <div class="donation-option donation-option-50">
+          <div class="donation-option donation-option-50" data-amount="50">
             <strong>50€</strong><br />
             <p>Soins vétérinaires complets pour un animal</p>
           </div>
         </div>
         <div class="donation-frequency">
-          <button class="donation-frequency-btn">Une fois</button>
-          <button class="donation-frequency-btn">Mensuel</button>
-          <button class="donation-frequency-btn">Annuel</button>
+          <button class="donation-frequency-btn" data-frequency="Une fois">Une fois</button>
+          <button class="donation-frequency-btn" data-frequency="Mensuel">Mensuel</button>
+          <button class="donation-frequency-btn" data-frequency="Annuel">Annuel</button>
         </div>
-        <button class="donate-submit-btn">Faire un don de 50€/mois</button>
+        <button class="donate-submit-btn">Faire un don</button>
       </div>
     </section>
+    
 
     <!-- Section Mission -->
     <section class="mission">
@@ -81,34 +83,36 @@
     </section>
 
   <!-- Section Histoire -->
+<!-- Section Histoire -->
 <section class="histoire">
   <h1>Notre Histoire</h1>
   <!-- Image principale en fond -->
   <div class="histoire-top">
-      <div class="histoire-image">
+      <div class="histoire-image" id="histoire-image">
           <div class="histoire-content">
-              <p class="titre">Louna</p>
-              <p class="description">
+              <p class="titre" id="titre">Louna</p>
+              <p class="description" id="description">
                   Trouvée dans la rue avec une patte cassée, Louna a été soignée et a retrouvé sa joie de vivre.
                   Elle coule maintenant des jours heureux dans sa nouvelle famille.
               </p>
-              <p class="date">Janvier 2024</p>
+              <p class="date" id="date">Janvier 2024</p>
           </div>
       </div>
   </div>
   <!-- Galerie d'images -->
   <div class="histoire-bottom">
-      <div class="histoire-item histoire-item1">
+      <div class="histoire-item" data-image="asset/imagechien2.jpeg" data-titre="Louna" data-description="Trouvée dans la rue avec une patte cassée, Louna a été soignée et a retrouvé sa joie de vivre. Elle coule maintenant des jours heureux dans sa nouvelle famille." data-date="Janvier 2024">
           <p>Louna</p>
       </div>
-      <div class="histoire-item histoire-item2">
+      <div class="histoire-item" data-image="asset/imageoscar.jpeg" data-titre="Oscar" data-description="Oscar a été sauvé d'une situation de négligence, et aujourd'hui il est heureux dans une nouvelle famille." data-date="Février 2024">
           <p>Oscar</p>
       </div>
-      <div class="histoire-item histoire-item3">
+      <div class="histoire-item" data-image="asset/imagenmax.jpeg" data-titre="Max" data-description="Max a été trouvé dans un état pitoyable, mais grâce aux soins qu'il a reçus, il a retrouvé sa forme." data-date="Mars 2024">
           <p>Max</p>
       </div>
   </div>
 </section>
+
 
 
     <!-- Section Quiz et Impact -->
@@ -205,5 +209,6 @@
       <h2>Suivez-nous</h2>
     </div>
   </footer>
+  <script src="script/accueil.js"></script>
 </body>
 </html>
