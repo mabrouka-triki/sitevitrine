@@ -154,7 +154,40 @@ nav ul li a {
 
 
 
+/* Option de don sélectionnée (fond vert) */
+.donation-option.selected {
+    background-color: #28a745; /* Vert */
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); 
+}
 
+/* Bouton de donation (avant sélection) */
+.donate-submit-btn {
+    background-color: #F7012A;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.donate-submit-btn:hover {
+    background-color: #d40125;
+}
+
+/* Option de fréquence sélectionnée (fond vert) */
+.donation-frequency-btn.selected {
+    background-color: rgba(0, 197, 126, 1); 
+    color: white;
+}
+
+/* Effet d'hover pour la fréquence */
+.donation-frequency-btn:hover {
+    background-color: rgba(0, 197, 126, 1);
+}
 /* Titre */
 .donation-section h2 {
     text-align: center;
@@ -218,6 +251,7 @@ nav ul li a {
     border-radius: 5px;
     cursor: pointer;
 }
+
 
 /* Bouton de validation */
 .donate-submit-btn {
@@ -296,6 +330,8 @@ nav ul li a {
 
 
 
+
+
 /* Section 4 */
 .histoire {
     display: flex;
@@ -323,7 +359,7 @@ nav ul li a {
 .histoire-image {
 
     height: auto;
-    min-height: 90vh;
+    min-height: 70vh;
     background: url('asset/imagechien2.jpeg') no-repeat center/cover;
     border-radius: 10px;
     display: flex;
@@ -628,15 +664,20 @@ textarea {
     nav {
         flex-direction: column;
         align-items: flex-start; 
+        
+
     }
 
-    .nav-list {
-        flex-direction: column; 
+  
+     
+    .menu-right {
         align-items: flex-start;
         gap: 10px;
-        width: 100%;
-        padding-left: 20px;
+        width: 80%;
+     
     }
+    
+
 
  
 
@@ -743,5 +784,3 @@ textarea {
    
 
 }
- 
-
