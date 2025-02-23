@@ -35,9 +35,10 @@ frequencyButtons.forEach(button => {
 });
 
 // Fonction pour mettre à jour le texte du bouton "Faire un don"
+
 function updateDonateButton() {
   if (selectedAmount && selectedFrequency) {
-    donateButton.textContent = `Faire un don de ${selectedAmount}€ - ${capitalizeFirstLetter(selectedFrequency)}`;
+    donateButton.textContent = `Faire un don de ${selectedAmount}€ - ${(selectedFrequency)}`;
   } else {
     donateButton.textContent = 'Faire un don';
   }
@@ -88,7 +89,9 @@ animaux.forEach(animal => {
       description.textContent = animal.description;
       date.textContent = animal.date;
   });
-
+  
   // Ajouter la vignette à la galerie
   histoireBottom.appendChild(item);
 });
+
+

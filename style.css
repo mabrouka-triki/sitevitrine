@@ -404,8 +404,8 @@ nav ul li a {
   }
   
   .histoire-item {
-    height: 150px; /* Hauteur réduite pour les vignettes */
-    width: 150px;  /* Largeur fixe pour une taille uniforme */
+    height: 150px; 
+    width: 150px; 
     background-size: cover;
     background-position: center;
     display: flex;
@@ -423,7 +423,7 @@ nav ul li a {
     transform: scale(1.05);
     opacity: 0.8;
   }
-  
+
 
 /* Section 5 */
 
