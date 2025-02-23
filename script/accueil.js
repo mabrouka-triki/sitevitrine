@@ -35,7 +35,6 @@ frequencyButtons.forEach(button => {
   });
 });
 
-// Fonction pour mettre à jour le textedescription du bouton "Faire un don"
 
 function updateDonateButton() {
   if (selectedAmount && selectedFrequency) {
@@ -47,7 +46,6 @@ function updateDonateButton() {
 
 
 
-// Liste des animaux sauvés
 const animaux = [
   {
       image: "../asset/imagechien2.jpeg",
@@ -69,21 +67,18 @@ const animaux = [
   }
 ];
 
-// Sélectionner les éléments nécessaires
 const histoireImage = document.querySelector('.histoire-image');
 const titre = document.getElementById('titre');
 const description = document.getElementById('description');
 const date = document.getElementById('date');
 const histoireBottom = document.getElementById('histoire-bottom');
 
-// Générer dynamiquement les cartes des animaux
 animaux.forEach(animal => {
   const item = document.createElement("div");
   item.classList.add("histoire-item");
   item.style.backgroundImage = `url(${animal.image})`;
   item.innerHTML = `<p>${animal.titre}</p>`;
   
-  // Met à jour l'image principale et les informations lors du clic
   item.addEventListener("click", () => {
       histoireImage.style.backgroundImage = `url(${animal.image})`;
       titre.textContent = animal.titre;
@@ -91,7 +86,6 @@ animaux.forEach(animal => {
       date.textContent = animal.date;
   });
   
-  // Ajouter la vignette à la galerie
   histoireBottom.appendChild(item);
 });
 
@@ -142,7 +136,6 @@ animaux.forEach(animal => {
                 // Désactive les boutons après une réponse
                 buttons.forEach((btn) => btn.disabled = true);
 
-                // Affichage du score à la fin
                 if (answeredQuestions === totalQuestions) {
                     displayScore(score, totalQuestions);
                 }
