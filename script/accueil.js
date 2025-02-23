@@ -21,6 +21,7 @@ donationOptions.forEach(option => {
   });
 });
 
+
 // Ajouter l'événement de sélection sur les boutons de fréquence
 frequencyButtons.forEach(button => {
   button.addEventListener('click', () => {
@@ -34,7 +35,7 @@ frequencyButtons.forEach(button => {
   });
 });
 
-// Fonction pour mettre à jour le texte du bouton "Faire un don"
+// Fonction pour mettre à jour le textedescription du bouton "Faire un don"
 
 function updateDonateButton() {
   if (selectedAmount && selectedFrequency) {
@@ -94,4 +95,66 @@ animaux.forEach(animal => {
   histoireBottom.appendChild(item);
 });
 
+
+//quiz
+    let score = 0;
+    let totalQuestions = document.querySelectorAll(".question").length;
+    let answeredQuestions = 0;
+
+    const questions = document.querySelectorAll(".question");
+
+    questions.forEach((question) => {
+        const buttons = question.querySelectorAll(".buttonquiz");
+        const correctAnswer = question.getAttribute("data-correct").toLowerCase();
+
+        buttons.forEach((button) => {
+            button.addEventListener("click", function () {
+                if (question.classList.contains("answered")) return; 
+
+                question.classList.add("answered");
+                answeredQuestions++;
+
+                let resultSymbol = document.createElement("span");
+                resultSymbol.style.fontWeight = "bold";
+                resultSymbol.style.marginLeft = "10px"; 
+
+                let correctionMessage = document.createElement("p");
+                correctionMessage.style.fontSize = "14px";
+                correctionMessage.style.marginTop = "5px";
+
+                // Vérifie si la réponse est correcte
+                if (button.textContent.trim().toLowerCase().startsWith(correctAnswer)) {
+                    button.style.backgroundColor = "#EDFCF5"; 
+                    resultSymbol.textContent = " V";
+                    resultSymbol.style.color = "green"; 
+                  
+                    score++;
+                } else {
+                    button.style.backgroundColor = "#FCE8E8"; 
+                    resultSymbol.textContent = " X";
+                    resultSymbol.style.color = "red"; 
+              
+                }
+
+                button.appendChild(resultSymbol);
+                question.appendChild(correctionMessage);
+
+                // Désactive les boutons après une réponse
+                buttons.forEach((btn) => btn.disabled = true);
+
+                // Affichage du score à la fin
+                if (answeredQuestions === totalQuestions) {
+                    displayScore(score, totalQuestions);
+                }
+            });
+        });
+    });
+
+    function displayScore(score, total) {
+        const scoreMessage = document.createElement("div");
+        scoreMessage.innerHTML = `<h2>Votre score : <span>${score} </span> / <span style="color:black;">${total}</span></h2>`;
+        scoreMessage.style.textAlign = "center";
+        scoreMessage.style.marginTop = "20px";
+        document.querySelector(".section4").appendChild(scoreMessage);
+    }
 

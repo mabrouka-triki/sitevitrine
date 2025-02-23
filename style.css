@@ -153,11 +153,12 @@ nav ul li a {
 
 
 
-/* Option de don sélectionnée (fond vert) */
+/* /* Option de don sélectionnée  */
 .donation-option.selected {
-    background-color: #28a745; /* Vert */
-    color: white;
+    background-color: rgba(229, 255, 244, 1);
+    color: black;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); 
+    border:rgba(255, 255, 255, 1);
 }
 
 /* Bouton de donation (avant sélection) */
@@ -179,13 +180,13 @@ nav ul li a {
 
 /* Option de fréquence sélectionnée (fond vert) */
 .donation-frequency-btn.selected {
-    background-color: rgba(0, 197, 126, 1); 
-    color: white;
+    background-color:rgba(229, 255, 244, 1); 
+    color: black;
 }
 
 /* Effet d'hover pour la fréquence */
 .donation-frequency-btn:hover {
-    background-color: rgba(0, 197, 126, 1);
+    background-color: rgba(229, 255, 244, 1);
 }
 /* Titre */
 .donation-section h2 {
@@ -230,7 +231,7 @@ nav ul li a {
 /* Effet au survol */
 .donation-option:hover {
     transform: scale(1.05);
-    background-color: rgba(0, 197, 126, 1) ;
+    background-color: rgba(229, 255, 244, 1);
 }
 
 /* Boutons de fréquence */
@@ -281,7 +282,7 @@ nav ul li a {
 .mission {
     display: flex;
     justify-content: center;
-    background-color: #d2f5e3; 
+    background-color: #edfcf5;
     padding: 40px 0;
 }
 
@@ -355,7 +356,6 @@ nav ul li a {
     overflow: hidden;
   }
   
-  /* Réduction de la taille de l'image principale */
   .histoire-image {
     height: 90vh; /* Hauteur fixe pour réduire l'image principale */
     background: url('../asset/imagechien2.jpeg') no-repeat center/cover;
@@ -473,8 +473,9 @@ nav ul li a {
 
 
 
-/* Impact */
+/*  Section 6 impact */
 .impact {
+    background-color:#edfcf5;
     text-align: center;
 
 }
@@ -508,7 +509,7 @@ nav ul li a {
     margin-bottom: 10px;
 }
 
-/* section 5  */
+
 
 
 .container {
