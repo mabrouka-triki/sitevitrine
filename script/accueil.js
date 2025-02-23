@@ -45,45 +45,50 @@ function updateDonateButton() {
 
 
 
-
-// Capitalisation de la première lettre de la fréquence
-function capitalizeFirstLetter(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
-}
-
-// Ajouter l'événement de validation du don
-donateButton.addEventListener('click', () => {
-  if (selectedAmount && selectedFrequency) {
-    alert(`Merci pour votre don de ${selectedAmount}€ en mode ${selectedFrequency}!`);
-  } else {
-    alert('Veuillez sélectionner un montant et une fréquence avant de faire un don.');
+// Liste des animaux sauvés
+const animaux = [
+  {
+      image: "../asset/imagechien2.jpeg",
+      titre: "Louna",
+      description: "Trouvée dans la rue avec une patte cassée, Louna a été soignée et a retrouvé sa joie de vivre.",
+      date: "Janvier 2024"
+  },
+  {
+      image: "../asset/imagechien3.jpg",
+      titre: "Oscar",
+      description: "Oscar a été sauvé d'une situation de négligence, et aujourd'hui il est heureux dans une nouvelle famille.",
+      date: "Février 2024"
+  },
+  {
+      image: "../asset/ImageMax.jpeg",
+      titre: "Max",
+      description: "Max a été trouvé dans un état pitoyable, mais grâce aux soins qu'il a reçus, il a retrouvé sa forme.",
+      date: "Mars 2024"
   }
-});
-
+];
 
 // Sélectionner les éléments nécessaires
-const histoireItems = document.querySelectorAll('.histoire-item');
 const histoireImage = document.querySelector('.histoire-image');
 const titre = document.getElementById('titre');
 const description = document.getElementById('description');
 const date = document.getElementById('date');
+const histoireBottom = document.getElementById('histoire-bottom');
 
-// Ajouter l'événement de clic sur chaque élément de la galerie
-histoireItems.forEach(item => {
-  item.addEventListener('click', () => {
-    // Récupérer les données de l'élément cliqué
-    const imageUrl = item.getAttribute('data-image');
-    const titreText = item.getAttribute('data-titre');
-    const descriptionText = item.getAttribute('data-description');
-    const dateText = item.getAttribute('data-date');
-
-    // Changer l'image de fond
-    histoireImage.style.backgroundImage = `url(${imageUrl})`;
-    
-    // Mettre à jour le texte
-    titre.textContent = titreText;
-    description.textContent = descriptionText;
-    date.textContent = dateText;
+// Générer dynamiquement les cartes des animaux
+animaux.forEach(animal => {
+  const item = document.createElement("div");
+  item.classList.add("histoire-item");
+  item.style.backgroundImage = `url(${animal.image})`;
+  item.innerHTML = `<p>${animal.titre}</p>`;
+  
+  // Met à jour l'image principale et les informations lors du clic
+  item.addEventListener("click", () => {
+      histoireImage.style.backgroundImage = `url(${animal.image})`;
+      titre.textContent = animal.titre;
+      description.textContent = animal.description;
+      date.textContent = animal.date;
   });
-});
 
+  // Ajouter la vignette à la galerie
+  histoireBottom.appendChild(item);
+});

@@ -117,19 +117,18 @@ nav ul li a {
 }
 
  .histoire-item1{
-    background-image: url('asset/imagechien.jpg');
     width: 100%;
     height: 100vh; 
     padding: 0;
 }
 .histoire-item2{
-    background-image: url('asset/imagechien2.jpeg');
+ 
     width: 100%;
     height: 100vh; 
     padding: 0;
 }
 .histoire-item3{
-    background-image: url('asset/ImageMax.jpeg');
+ 
     width: 100%;
     height: 100vh; 
     padding: 0;
@@ -332,35 +331,34 @@ nav ul li a {
 
 
 
-/* Section 4 */
+
+
+/* Section Histoire */
 .histoire {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     padding: 40px 20px;
-}
-
-.histoire h1 {
-    margin-bottom: 20px;
+  }
   
+  .histoire h1 {
+    margin-bottom: 20px;
     font-weight: bold;
-}
-
-
-.histoire-top {
+  }
+  
+  .histoire-top {
     width: 100%;
     max-width: 90%;
     position: relative;
     border-radius: 10px;
     overflow: hidden;
-}
-
-.histoire-image {
-
-    height: auto;
-    min-height: 70vh;
-    background: url('asset/imagechien2.jpeg') no-repeat center/cover;
+  }
+  
+  /* Réduction de la taille de l'image principale */
+  .histoire-image {
+    height: 90vh; /* Hauteur fixe pour réduire l'image principale */
+    background: url('../asset/imagechien2.jpeg') no-repeat center/cover;
     border-radius: 10px;
     display: flex;
     align-items: flex-end; 
@@ -369,67 +367,65 @@ nav ul li a {
     color: white;
     margin: auto;
     position: relative;
-   
-}
-.histoire-content {
+  }
+  
+  .histoire-content {
     position: absolute;
     left: 20px;
     bottom: 20px;
     border-radius: 10px;
     text-align: left;
-    background-size: cover;
-}
-
-.histoire-content .titre {
+  }
+  
+  .histoire-content .titre {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 10px;
-}
-
-.histoire-content .description {
+  }
+  
+  .histoire-content .description {
     font-size: 1.2rem;
     margin: 10px 0;
-}
-
-.histoire-content .date {
+  }
+  
+  .histoire-content .date {
     font-size: 1rem;
-    color:white;
-}
-
-/* Galerie d'images */
-.histoire-bottom {
+    color: white;
+  }
+  
+  /* Galerie d'images */
+  .histoire-bottom {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 90%;
     gap: 15px;
     margin-top: 20px;
-}
-
-.histoire-item {
-   
-    height: 200px;
+  }
+  
+  .histoire-item {
+    height: 150px; /* Hauteur réduite pour les vignettes */
+    width: 150px;  /* Largeur fixe pour une taille uniforme */
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
     border-radius: 10px;
     cursor: pointer;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-}
-
-.histoire-item:hover {
+  }
+  
+  .histoire-item:hover {
     transform: scale(1.05);
     opacity: 0.8;
-}
+  }
+  
 
-
-
-/* Section 4 */
+/* Section 5 */
 
 .section4 {
     background-color: #edfcf5;
@@ -474,6 +470,8 @@ nav ul li a {
     transition: 0.3s ease;
     text-align: left;
 }
+
+
 
 /* Impact */
 .impact {
